@@ -1,3 +1,10 @@
+'''
+Author: Fanchen Bao
+Date: 01/14/2018
+
+Description: Module for digitsCombinationsInPi.py, givenNumberInPi.py, and numbersInPi.py
+'''
+
 def create_target_string (filename):
 	''' open a file and then turn its content into one string'''
 	with open(filename) as file_object:
@@ -20,13 +27,13 @@ def make_combination_lists(number_list):
 
 
 def examine_number (number_list, in_string, not_in_string, target_string):
-	''' examine whether the numbers in number_list are also in a target string.
+	''' examine whether the numbers (in str form) in number_list are also in a target string.
 		in_string records those that are in target_string, not_in_string those not.'''
-	for i in number_list:
-		if str(i) not in target_string:
-			not_in_string.append(i)
+	for num in number_list:
+		if num not in target_string:
+			not_in_string.append(num)
 		else:
-			in_string.append(i)	
+			in_string.append(num)	
 
 def print_results (number_list, number_of_digits, target_string, in_or_not):
 	''' print results, if print numbers in pi, in_or_not == 1, otherwise 0'''
